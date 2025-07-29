@@ -62,28 +62,20 @@ export const AboutSection = () => {
             </h3>
 
             <p className="text-muted-foreground">
-              Currently learning web development and seeking opportunities to
-              grow. Passionate about creating meaningful digital experiences and
-              eager to contribute to innovative projects.
+              I'm a recent graduate stepping into the world of web development.
+              I enjoy turning ideas into simple, functional, and user-friendly
+              experiences on the web.
             </p>
 
             <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+              I'm motivated to learn and grow on projects that make a real
+              impact. My focus right now is building a strong foundation and
+              becoming a valuable part of a creative, driven team.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            <div className="pt-8 opacity-0 animate-fade-in-delay-4">
               <a href="#contact" className="cosmic-button">
                 Get In Touch
-              </a>
-
-              <a
-                href="/resume/Resume.pdf"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-              >
-                Download CV
               </a>
             </div>
           </div>

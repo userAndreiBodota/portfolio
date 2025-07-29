@@ -34,9 +34,15 @@ export const Navbar = () => {
           className="text-xl font-bold text-primary flex items-center"
           href="#hero"
         >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground"> Andrei </span>{" "}
-            Portfolio
+          <span
+            className="relative z-10"
+            style={{ Color: "hsl(var(--primary))" }}
+          >
+            <img
+              src="/resume/logo.png"
+              alt="Logo"
+              className="h-7 w-auto inline-block align-middle"
+            />{" "}
           </span>
         </a>
 
