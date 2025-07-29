@@ -27,8 +27,7 @@ const projects = [
       "Website for pet care with profile information and pet management",
     image: "/projects/pet-care.png",
     tags: ["MongoDB", "Express.js", "Node.js", "React", "Tailwind CSS"],
-    demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/userAndreiBodota/pet-care",
   },
   {
     id: 4,
