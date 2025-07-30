@@ -12,7 +12,7 @@ import {
 import { cn } from "../lib/utils.js";
 import { useToast } from "../hooks/use-toast.js";
 import { useState } from "react";
-
+import emailjs from "emailjs-com";
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -22,13 +22,27 @@ export const ContactSection = () => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      setIsSubmitting(false);
-    }, 1500);
+    emailjs
+      .sendForm(
+        "service_4kywqrk",
+        "template_r2y9gk2",
+        e.target,
+        "XXbqoSitge_fA--IA"
+      )
+      .then((result) => {
+        toast({
+          title: "Message Sent",
+          description: "Your message has been sent successfully!",
+        });
+        setIsSubmitting(false);
+      }),
+      (error) => {
+        toast({
+          title: "Error",
+          description: "There was an error sending your message.",
+        });
+        setIsSubmitting(false);
+      };
   };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -120,7 +134,7 @@ export const ContactSection = () => {
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="from_name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
                   placeholder="type your name..."
@@ -138,7 +152,7 @@ export const ContactSection = () => {
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="reply_to"
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
                   placeholder="user@gmail.com"
